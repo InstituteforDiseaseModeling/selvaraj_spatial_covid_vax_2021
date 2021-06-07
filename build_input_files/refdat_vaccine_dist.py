@@ -5,8 +5,6 @@ from vaccine_efficacy_article.build_input_files.refdat_age_pyr import find_age_p
 
 def vaccine_availability_by_month(covax_distribution=True, coverage=0, **kwargs):
 
-    # From Linksbridge simulations for GAVI of anticipated timing of COVAX vaccine supply
-
     if covax_distribution:
 
         cumulative_vax = [1, 39, 88, 131, 198, 385, 582, 775, 961, 1233, 1501, 1768]

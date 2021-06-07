@@ -17,3 +17,5 @@ refdat_contact_mat.py contains a function to calculate the median contact matrix
 refdat_policy_effect.py contains a function to calculate multipliers for the contact matrices depending on govt. policies
 in place. This data was obtained from https://www.bsg.ox.ac.uk/research/research-projects/coronavirus-government-response-tracker
  
+refdat_vaccine_dist.py contains a function to distribute vaccines per the COVAX timeline. This data was obtained from 
+https://www.gavi.org/news/document-library/covax-global-supply-forecast
