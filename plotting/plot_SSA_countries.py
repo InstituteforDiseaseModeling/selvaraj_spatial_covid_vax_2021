@@ -12,7 +12,7 @@ from datetime import date
 
 import geopandas as gpd
 
-filename = '/Users/pselvaraj/Downloads/World_Countries_(Generalized)/World_Countries__Generalized_.shp'
+filename = './World_Countries__Generalized_.shp'
 
 if __name__ == '__main__':
 
@@ -39,6 +39,5 @@ if __name__ == '__main__':
                        legend=True)
     data_selected.plot(column='Best', linewidth=0.1, ax=ax, color='xkcd:blue', edgecolor='0.8',
                      legend=True)
-    plt.savefig('/Users/pselvaraj/Dropbox (IDM)/SSA.png')
-    plt.savefig('/Users/pselvaraj/Dropbox (IDM)/SSA.pdf')
+    plt.savefig('./figures/SSA.png')
     plt.show()

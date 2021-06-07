@@ -8,8 +8,7 @@ import os
 mpl.rcParams['pdf.fonttype'] = 42
 rcParams.update({'font.size': 16})
 
-fig_dir = os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios', 'vaccine_efficacy_article',
-                         'figures')
+fig_dir = './figures'
 os.makedirs(fig_dir, exist_ok=True)
 
 

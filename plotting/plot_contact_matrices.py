@@ -8,8 +8,7 @@ from vaccine_efficacy_article.build_input_files.refdat_contact_mat import find_m
 
 mpl.rcParams['pdf.fonttype'] = 42
 
-fig_dir = os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios', 'vaccine_efficacy_article',
-                         'figures')
+fig_dir = './figures'
 os.makedirs(fig_dir, exist_ok=True)
 
 

@@ -14,11 +14,10 @@ type = 'covax_baseline_all_combos_20countries'
 exp = 'covax_baseline_all_combos_20countries'
 smoothing_window = 7
 
-change_cases_file = '/Users/pselvaraj/Github/covid-dtk-scenarios/vaccine_efficacy_article/data/%s/%s_spatial_data_full.csv' % (type, type)
-change_cases_file_processed = '/Users/pselvaraj/Github/covid-dtk-scenarios/vaccine_efficacy_article/data/%s/%s_spatial_data_final.csv' % (type, type)
+change_cases_file = './data/%s/%s_spatial_data_full.csv' % (type, type)
+change_cases_file_processed = './data/%s/%s_spatial_data_final.csv' % (type, type)
 
-os.makedirs(os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios', 'vaccine_efficacy_article', 'figures',
-                         type), exist_ok=True)
+os.makedirs(os.path.join('./figures', type), exist_ok=True)
 
 pops = {'Urban': 1.2e4, 'Rural': 2.8e4, 'Total': 4e4}
 
@@ -216,8 +215,6 @@ for j, channel_group in enumerate([['Urban_smoothed', 'Rural_smoothed'],
         sum_type = 'cumulative'
     else:
         sum_type = 'cumulative_pop'
-    fig_name = os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios', 'vaccine_efficacy_article', 'figures',
-                            type,
-                            '%s_timeseries_%s_base_split_%s_spatial.png' % (type, add, sum_type))
+    fig_name = os.path.join(fig_dir, type, '%s_timeseries_%s_base_split_%s_spatial.png' % (type, add, sum_type))
     plt.savefig(fig_name)
     plt.close('all')

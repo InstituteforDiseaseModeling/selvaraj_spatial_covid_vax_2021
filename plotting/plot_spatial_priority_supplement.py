@@ -12,19 +12,19 @@ rcParams.update({'font.size': 16})
 # type = 'pulsed_phased'
 type = 'covax_spatial_priority'
 
-fig_dir = os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios',
-                         'vaccine_efficacy_article', 'figures', type)
+fig_dir = os.path.join('./figures', type)
 os.makedirs(fig_dir, exist_ok=True)
 
 settings = ['Urban_', 'Rural_', '']
 channels = ['Infections', 'Severe', 'Mortality']
 data_channels = [s + c for s in settings for c in channels]
 
-filename = os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios',
-                         'vaccine_efficacy_article', 'data', '%s' % type, '%s_event_recorder_summarized.csv' % type)
+filename = os.path.join('./data', '%s' % type, '%s_event_recorder_summarized.csv' % type)
+
 if not os.path.exists(filename):
-    df = pd.read_csv(os.path.join(os.path.expanduser('~'), 'Github', 'covid-dtk-scenarios',
-                                  'vaccine_efficacy_article', 'data', '%s' % type, '%s_event_recorder_full.csv' % type))
+
+    df = pd.read_csv(os.path.join('./data', '%s' % type, '%s_event_recorder_full.csv' % type))
+
     df = df.groupby(['Run_Number', 'start_day', "vaccine_coverage_1st_dose", 'scenario', 'target_group', 'migration',
                      'R0', 'urban_prioritization'])[data_channels].apply(np.sum).reset_index()
 
