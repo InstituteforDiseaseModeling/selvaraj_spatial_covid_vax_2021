@@ -10,6 +10,9 @@ supplementary file
 plot_baseline_urban_rural_all_combos_timeseries.py - creates 9 panel figure describing the daily incidence of COVID 
 infections as well as cumulative infections for a given scenario
 
+plot_cgrt.py - creates a figure with oxford covid-19 government policy tracker scores for each day since the first case
+in each of the 37 countries considered for this work. 
+
 plot_contact_matrices.py - creates contact matrix plot for home, work, school and community settings in urban and rural 
 areas of a representative country as shown in the supplementary file
 
